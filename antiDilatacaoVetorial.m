@@ -1,3 +1,4 @@
+%x e a devem ser vetores linha
 function antiDilatacaoVetorial = antiDilatacaoVetores (x, a)
 
 conjugadoX = kron(conjugado(x), ones(length(x), 1));

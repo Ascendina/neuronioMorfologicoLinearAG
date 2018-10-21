@@ -1,3 +1,4 @@
+%x e a devem ser vetores linha
 function dilatacaoVetorial = dilatacaoVetor (x,a)
 
 entrada = kron(x, ones(length(x), 1));

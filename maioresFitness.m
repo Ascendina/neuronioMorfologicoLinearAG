@@ -1,4 +1,4 @@
-function melhoresFitness = maioresFitness(fitnessIndividuos)
+function [melhoresFitness1, melhoresFitness2, melhoresFitness3] = maioresFitness(fitnessIndividuos)
 
 %%Verificando qual o melhor valor de fitness dos individuos que foram
 %%gerados
@@ -6,7 +6,7 @@ function melhoresFitness = maioresFitness(fitnessIndividuos)
  
  %%encontrando a posicao dos melhor individuo no vetor
  for i=1:size(fitnessIndividuos,2)
-    if(fitnessIndividuo == melhorFitness)
+    if(fitnessIndividuos(1,i) == melhorFitness)
         fitnessMelhor_Filho1 = i; 
         break;
     end
@@ -21,14 +21,15 @@ function melhoresFitness = maioresFitness(fitnessIndividuos)
  
  %%encontrando a posicao dos melhor individuo no vetor
  for i=1:size(fitnessIndividuos,2)
-    if(fitnessIndividuo == melhorFitness1)
+    if(fitnessIndividuos(1,i) == melhorFitness1)
         fitnessMelhor_Filho2 = i; 
         break;
     end
  end
  
- 
- melhoresFitness = [fitnessMelhor_Filho1, fitnessMelhor_Filho2, melhorFitness];
- 
+ %Enviando saidas
+ melhoresFitness1 = fitnessMelhor_Filho1; 
+ melhoresFitness2 = fitnessMelhor_Filho2;
+ melhoresFitness3 = melhorFitness;
 end
  

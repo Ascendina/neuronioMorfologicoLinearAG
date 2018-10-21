@@ -1,4 +1,4 @@
-function recombinacao = recombinaMax (vetor1, vetor2)
+function [recombinacao1,recombinacao2] = recombinaMax (vetor1, vetor2)
 
 %%Se o numero de colunas dos vetores pais forem iguais,
 %% Os calculos podem ser realizados
@@ -14,10 +14,13 @@ if (size(vetor1,2) == size(vetor2,2))
     vetorfilho2 = [vetor2(1:pontoCorte),vetorMaxPais(pontoCorte+1:size(vetor2,2))];
     
     %%Reunindo filhos em uma matriz para ter saida unica
-    recombinacao = [vetorfilho1',vetorfilho2']';
+    recombinacao1 = vetorfilho1;
+    recombinacao2 = vetorfilho2;
+    %%antes era assim [vetorfilho1',vetorfilho2']';
     
 else
-    recombinacao = [0,0];
+    recombinacao1 = 0;
+    recombinacao2 = 0;
 end
 
 end

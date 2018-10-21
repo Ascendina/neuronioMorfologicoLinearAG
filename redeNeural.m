@@ -30,7 +30,7 @@ saidaNeuronio4 = neuroMorfoLinear (entrada, pesoA_N4, pesoB_N4, pesoC_N4, pesoD_
 %% CAMADA SAIDA
 %%---------------
 
-vetorEntradaCamadaSaida = [saidaNeuronio1, saidaNeuronio2, saidaNeuronio3, saidaNeuronio4];
+vetorEntradaCamadaSaida = [saidaNeuronio1, saidaNeuronio2, saidaNeuronio3, saidaNeuronio4].';
 
 redeNeuralMorfologica = neuroMorfoLinear (vetorEntradaCamadaSaida, pesoA_NS, pesoB_NS, pesoC_NS, pesoD_NS, pesoG_NS, bias_NS, phi_NS, lambda_NS);
 
